@@ -5,7 +5,7 @@ const LandingPage = () => {
     const navigate = useNavigate()
 
     const handleSeeker = ()=>{
-        navigate('/seeker-auth')
+        navigate('/seeker-registration')
     }
 
     const handleProvider = ()=>{
