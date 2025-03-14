@@ -1,7 +1,7 @@
 // backend/index.js
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
 
 // Create the Express app
 const app = express();
@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/support-platform', {
+mongoose.connect('mongodb://192.168.2.21:27017/support-platform', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -19,7 +19,8 @@ mongoose.connect('mongodb://localhost:27017/support-platform', {
 .catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
-const seekerRoutes = require('./routes/seeker');
+import seekerRoutes from './routes/Seeker.js';
+
 app.use('/api/seeker', seekerRoutes);
 
 // Start the server
@@ -27,3 +28,8 @@ const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the Home Page!');
+  });
+  
