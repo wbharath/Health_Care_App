@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import SeekerRegistration from './components/SeekerRegistration'
 import SeekerLogin from './components/SeekerLogin'
-
+import SeekerDashboard from './components/SeekerDashboard'
 
 function App() {
   
@@ -12,9 +12,10 @@ function App() {
     <Router>
       <Routes>
         {/* Seeker Routes */}
-        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/' element={<LandingPage />} />
         <Route path="/seeker-registration" element={<SeekerRegistration />} />
         <Route path="/seeker-login" element={<SeekerLogin />} />
+        <Route path="/seeker-dashboard" element={<SeekerDashboard />} />
         {/* <Route path="/seeker-dashboard" element={<SeekerDashboard />} /> */}
         {/* Provider Routes */}
         {/* <Route path="/provider-registration" element={<ProviderRegistration />} /> */}
