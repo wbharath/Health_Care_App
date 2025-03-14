@@ -9,7 +9,7 @@ const LandingPage = () => {
     }
 
     const handleProvider = ()=>{
-        navigate('/provider-auth')
+        navigate('/provider-registration')
     }
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>

@@ -20,8 +20,10 @@ mongoose.connect('mongodb://192.168.2.21:27017/support-platform', {
 
 // Routes
 import seekerRoutes from './routes/Seeker.js';
+import providerRoutes from './routes/Provider.js'
 
 app.use('/api/seeker', seekerRoutes);
+app.use('/api/provider', providerRoutes);
 
 // Start the server
 const PORT = 5000;
