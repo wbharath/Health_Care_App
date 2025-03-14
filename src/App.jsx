@@ -5,7 +5,9 @@ import LandingPage from './components/LandingPage'
 import SeekerRegistration from './components/SeekerRegistration'
 import SeekerLogin from './components/SeekerLogin'
 import SeekerDashboard from './components/SeekerDashboard'
-
+import ProviderDashboard from './components/ProviderDashboard'
+import ProviderRegistration from './components/ProviderRegistration'
+import ProviderLogin from './components/ProviderLogin'
 function App() {
   
   return (
@@ -16,11 +18,10 @@ function App() {
         <Route path="/seeker-registration" element={<SeekerRegistration />} />
         <Route path="/seeker-login" element={<SeekerLogin />} />
         <Route path="/seeker-dashboard" element={<SeekerDashboard />} />
-        {/* <Route path="/seeker-dashboard" element={<SeekerDashboard />} /> */}
         {/* Provider Routes */}
-        {/* <Route path="/provider-registration" element={<ProviderRegistration />} /> */}
-        {/* <Route path="/provider-login" element={<ProviderLogin />} /> */}
-        {/* <Route path="/provider-dashboard" element={<ProviderDashboard />} /> */}
+        <Route path="/provider-registration" element={<ProviderRegistration />} />
+        <Route path="/provider-login" element={<ProviderLogin />} />
+        <Route path="/provider-dashboard" element={<ProviderDashboard />} />
       </Routes>
     </Router>
   )
