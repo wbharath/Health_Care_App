@@ -8,10 +8,14 @@ import SeekerDashboard from './components/SeekerDashboard'
 import ProviderDashboard from './components/ProviderDashboard'
 import ProviderRegistration from './components/ProviderRegistration'
 import ProviderLogin from './components/ProviderLogin'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
 function App() {
   
   return (
     <Router>
+      <div>
+        <ToastContainer position="top-center"/>
       <Routes>
         {/* Seeker Routes */}
         <Route path='/' element={<LandingPage />} />
@@ -23,6 +27,7 @@ function App() {
         <Route path="/provider-login" element={<ProviderLogin />} />
         <Route path="/provider-dashboard" element={<ProviderDashboard />} />
       </Routes>
+      </div>
     </Router>
   )
 }
