@@ -43,4 +43,20 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+router.put('/update/:id', async (req, res) => {
+    try {
+      const providerId = req.params.id;
+      const updateData = req.body;
+      const updatedProvider = await Provider.findByIdAndUpdate(providerId, updateData, { new: true });
+      if (!updatedProvider) {
+        return res.status(404).json({ message: 'Provider not found' });
+      }
+      res.status(200).json({ message: 'Profile updated successfully', provider: updatedProvider });
+    } catch (error) {
+      console.error('Provider update error:', error);
+      res.status(500).json({ message: 'Error updating provider details', error: error.message });
+    }
+  });
+
 export default router
